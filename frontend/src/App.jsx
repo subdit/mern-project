@@ -3,7 +3,17 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header/Header';
 import NewProduct from './components/Products/NewProduct';
 import ProductList from './components/Products/ProductList';
+// import GoalList from './components/goalList/GoalList';
+
 import './App.css';
+// const courseGoals = () => [
+//   { id: 'c1', text: 'Finish the Course' },
+//   {
+//     id: 'c2',
+//     text: 'Learn all about the main topics'
+//   },
+//   { id: 'c3', text: 'Help other students to learn' }
+// ];
 
 function App() {
   const [loadedProducts, setLoadedProducts] = useState([]);
@@ -62,6 +72,8 @@ function App() {
   return (
     <React.Fragment>
       <Header />
+      {/* <GoalList goals={courseGoals} /> */}
+
       <main>
         <NewProduct onAddProduct={addProductHandler} />
         {isLoading && <p className='loader'>Loading...please wait</p>}
